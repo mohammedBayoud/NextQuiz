@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Educational System Colors */
+    --background: 40 29% 91%; /* #EFECE3 - cream background */
+    --foreground: 0 0% 0%; /* #000000 - black text */
+
+    --card: 0 0% 100%; /* white cards */
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 213 38% 48%; /* #4A70A9 - primary blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 46% 70%; /* #8FABD4 - secondary blue */
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 40 29% 85%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 213 46% 70%; /* secondary blue for accents */
+    --accent-foreground: 0 0% 0%;
+
+    --success: 142 48% 46%; /* #3BA55C - green success */
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 58%; /* #D9534F - red danger */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 100%;
+    --ring: 213 38% 48%;
+
+    --radius: 0.75rem; /* 12px rounded corners */
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 213 38% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 29% 91%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 89%;
+    --sidebar-ring: 213 38% 48%;
+  }
+
+  .dark {
+    /* Dark mode - keeping consistent with light mode palette */
+    --background: 213 38% 15%;
+    --foreground: 0 0% 100%;
+
+    --card: 213 38% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 213 38% 20%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 213 38% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 46% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 213 38% 25%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 213 46% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 48% 46%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 38% 30%;
+    --input: 213 38% 25%;
+    --ring: 213 38% 58%;
+    
+    --sidebar-background: 213 38% 18%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 213 38% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 38% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 38% 30%;
+    --sidebar-ring: 213 38% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+  }
+}
